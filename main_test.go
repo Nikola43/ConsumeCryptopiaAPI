@@ -17,6 +17,12 @@ func TestMain(t *testing.T) {
 
 	requestDataFromAPI(BASE_URL, &market)
 	showCurrenciesList(&market)
+
+	var btc Data
+
+	btc = market.getCurrency("BTC")
+	fmt.Print("Algoritmo -> ")
+	fmt.Println(btc.Algorithm)
 }
 
 func TestMarket(t *testing.T) {
